@@ -4,7 +4,7 @@ Guidance and tools for setting up a repository for AI-assisted development so it
 
 ## Dev Foundation Setup skill
 
-[`dev-foundation-setup`](skills/dev-foundation-setup/SKILL.md) is a skill that plans and sets up a repo's AI-assisted dev foundation: a lean `CLAUDE.md`, architecture docs and ADRs, dev standards, secret guardrails, and skills for planning issues and reviewing PRs. It can also audit an existing setup.
+[`dev-foundation-setup`](../skills/dev-foundation-setup/SKILL.md) is a skill that plans and sets up a repo's AI-assisted dev foundation: a lean `CLAUDE.md`, architecture docs and ADRs, dev standards, secret guardrails, and skills for planning issues and reviewing PRs. It can also audit an existing setup.
 
 ### What it does
 
