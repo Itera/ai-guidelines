@@ -9,6 +9,7 @@ Catalog of everything in this repo. One line per page. Agents keep this up to da
 ## Wiki
 
 - [Project setup](wiki/project-setup.md) – How to set up a repo for secure, token-efficient AI-assisted development.
+- [Resources](wiki/resources.md) – Curated external resources: DORA research, maturity models, Norwegian regulation, newsletters and podcasts.
 
 ## Skills
 
