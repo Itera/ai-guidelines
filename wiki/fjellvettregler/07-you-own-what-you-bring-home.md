@@ -22,7 +22,7 @@ _None yet. Add short, anonymized examples._
 
 ## Related pages
 
-- [8. It's no shame to turn back](08-its-no-shame-to-turn-back.md)
+- [8. There's no shame in turning back](08-theres-no-shame-in-turning-back.md)
 
 ## Sources
 

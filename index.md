@@ -22,7 +22,7 @@ One page per [AI-Fjellvettregel](guidelines/fjellvettregler.md) on how to follow
 - [5. Give agents their own rope](wiki/fjellvettregler/05-give-agents-their-own-rope.md) – Own accounts, least privilege and hard limits for agents.
 - [6. Know your provisions](wiki/fjellvettregler/06-know-your-provisions.md) – Tracking AI costs and matching the model to the task.
 - [7. You own what you bring home](wiki/fjellvettregler/07-you-own-what-you-bring-home.md) – Reviewing AI output and keeping key decisions with people.
-- [8. It's no shame to turn back](wiki/fjellvettregler/08-its-no-shame-to-turn-back.md) – Spotting when AI work goes in circles, and what to do then.
+- [8. There's no shame in turning back](wiki/fjellvettregler/08-theres-no-shame-in-turning-back.md) – Spotting when AI work goes in circles, and what to do then.
 - [9. Hike as a team](wiki/fjellvettregler/09-hike-as-a-team.md) – Sharing setups, skills and lessons learned.
 - [10. Check that the trip was worth it](wiki/fjellvettregler/10-check-that-the-trip-was-worth-it.md) – Measuring the effect of AI with metrics like DORA.
 

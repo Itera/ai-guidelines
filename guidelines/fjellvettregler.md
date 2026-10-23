@@ -33,7 +33,7 @@ You are responsible for everything AI produces for you. Review code against the 
 
 Keep key decisions with people, such as architecture, programming language and handover to operations.
 
-### 8. It’s no shame to turn back
+### 8. There’s no shame in turning back
 If the AI goes in circles, or you no longer understand what it’s doing, stop. Step back and either rethink the task or do it yourself. Your judgment is the best equipment you have.
 
 ### 9. Hike as a team
