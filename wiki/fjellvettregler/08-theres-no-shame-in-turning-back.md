@@ -1,8 +1,8 @@
-# 8. It's no shame to turn back
+# 8. There's no shame in turning back
 
 How to notice when AI work is going nowhere, and what to do then.
 
-Rule: [AI-Fjellvettregler, rule 8](../../guidelines/fjellvettregler.md#8-its-no-shame-to-turn-back)
+Rule: [AI-Fjellvettregler, rule 8](../../guidelines/fjellvettregler.md#8-theres-no-shame-in-turning-back)
 
 ## How to follow it
 
