@@ -15,6 +15,7 @@ Rule: [AI-Fjellvettregler, rule 5](../../guidelines/fjellvettregler.md#5-give-ag
 ## Recommended skills and tools
 
 - [`dev-foundation-setup`](../../skills/dev-foundation-setup/SKILL.md) sets up permission deny rules and suggests hooks or sandboxes for sensitive repos. See [Project setup](../project-setup.md).
+- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) checks permission rules, auto mode and whether agents run with your own credentials.
 
 ## Examples and lessons learned
 

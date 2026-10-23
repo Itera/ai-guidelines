@@ -29,3 +29,4 @@ One page per [AI-Fjellvettregel](guidelines/fjellvettregler.md) on how to follow
 ## Skills
 
 - [dev-foundation-setup](skills/dev-foundation-setup/SKILL.md) – Plans and sets up (or audits) a repo's AI dev foundation: CLAUDE.md, docs/ADRs, secret guardrails, issue and PR-review skills.
+- [fjellvettregler-check](skills/fjellvettregler-check/SKILL.md) – Checks how well a developer and project follow the AI-Fjellvettregler, reports per rule and helps close the gaps.
