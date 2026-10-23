@@ -13,7 +13,7 @@ Rule: [AI-Fjellvettregler, rule 1](../../guidelines/fjellvettregler.md#1-know-th
 
 ## Recommended skills and tools
 
-_None yet. Add skills or tools that help people find or check the rules._
+- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) asks whether you know the policy and the regulations that apply.
 
 ## Examples and lessons learned
 

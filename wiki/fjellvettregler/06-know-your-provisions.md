@@ -15,6 +15,7 @@ Rule: [AI-Fjellvettregler, rule 6](../../guidelines/fjellvettregler.md#6-know-yo
 ## Recommended skills and tools
 
 - [`dev-foundation-setup`](../../skills/dev-foundation-setup/SKILL.md) keeps `CLAUDE.md` lean to save tokens. See [Project setup](../project-setup.md).
+- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) asks about budget and alerts, and checks the default model.
 
 ## Examples and lessons learned
 

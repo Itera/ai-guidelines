@@ -21,7 +21,7 @@ What to do:
 
 ## Recommended skills and tools
 
-_None yet. Add skills that help plan or break down tasks._
+- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) asks whether AI work has gone in circles lately, and suggests what to do then.
 
 ## Examples and lessons learned
 
