@@ -21,6 +21,7 @@ _None yet. Add short, anonymized examples._
 
 ## Related pages
 
+- [Resources: privacy, regulation and Norwegian context](../resources.md#privacy-regulation-and-norwegian-context) – including DPIA guidance.
 - [1. Know the rules before you head out](01-know-the-rules.md)
 - [5. Give agents their own rope](05-give-agents-their-own-rope.md)
 

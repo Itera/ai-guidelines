@@ -21,6 +21,8 @@ _None yet. Add short, anonymized examples._
 
 ## Related pages
 
+- [Resources: practices and maturity](../resources.md#practices-and-maturity) – DORA research and maturity models.
+- [Resources: costs and benefits](../resources.md#costs-and-benefits) – DORA's ROI framework.
 - [6. Know your provisions](06-know-your-provisions.md) – weigh the effect against the cost.
 - [9. Hike as a team](09-hike-as-a-team.md)
 

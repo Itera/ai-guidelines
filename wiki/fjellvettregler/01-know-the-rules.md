@@ -21,6 +21,7 @@ _None yet. Add short, anonymized examples._
 
 ## Related pages
 
+- [Resources: privacy, regulation and Norwegian context](../resources.md#privacy-regulation-and-norwegian-context) – AI Act and privacy guidance.
 - [2. Tell someone where you're going](02-tell-someone-where-youre-going.md) – agreeing on AI use with the customer.
 - [4. Pack only what you can afford to lose](04-pack-only-what-you-can-afford-to-lose.md) – what data you may share.
 

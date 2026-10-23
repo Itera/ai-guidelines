@@ -22,6 +22,7 @@ _None yet. Add short, anonymized examples. Mark prices and model names with the 
 
 ## Related pages
 
+- [Resources: costs and benefits](../resources.md#costs-and-benefits) – weighing AI costs against gains.
 - [2. Tell someone where you're going](02-tell-someone-where-youre-going.md) – who pays for AI costs.
 - [10. Check that the trip was worth it](10-check-that-the-trip-was-worth-it.md)
 
