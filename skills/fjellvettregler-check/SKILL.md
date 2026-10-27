@@ -36,6 +36,8 @@ This skill's questions and checks are written for these ten rules:
 
 **Drift check:** at the start, try to fetch `https://raw.githubusercontent.com/Itera/ai-guidelines/main/guidelines/fjellvettregler.md` and compare its rule titles with the list above. If they differ, warn the user: "The guidelines have changed since this skill was written. Some checks may be out of date." Then continue. If the fetch fails or is blocked, continue without a warning.
 
+**Language:** before anything else, ask the user whether to run the check in English or Norwegian (bokmål). Use that language for every question, reaction, the report and the AI use note. Use Norwegian names for Norwegian laws and bodies (for example *sikkerhetsloven*, *personvernombud*). The rule titles have no official Norwegian version, so give them in English. The linked wiki pages are in English.
+
 ## Phase 1 — Intake
 
 Ask one thing per question, and ask for specifics, not yes or no. Keep it conversational: ask **one question at a time**, in the order below, and wait for the answer before you ask the next. Never batch several questions in one message or tool call. React briefly to each answer (one sentence, for example a short tip or a note that it's a gap) before moving on. A multiple-choice question tool is fine for questions with options, one question per call, with "Don't know" as an option. Skip questions the user has already answered, and follow-ups that don't apply. The rule headings below are for your scoring only. Don't tell the user which rule a question belongs to.
