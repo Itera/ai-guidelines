@@ -38,33 +38,56 @@ This skill's questions and checks are written for these ten rules:
 
 ## Phase 1 — Intake
 
-Ask for specifics, not yes or no. Use a multiple-choice question tool if one is available (max 4 per round), with "Don't know" as an option.
+Ask one thing per question, and ask for specifics, not yes or no. Use a multiple-choice question tool if one is available, with "Don't know" as an option. Ask in rounds of max 4 questions, in the order below. Skip questions the user has already answered, and follow-ups that don't apply.
 
-Score each answer:
-- **✅** the user can name specifics
-- **⚠️** the answer is vague or partial ("I think so", "mostly")
+Score each rule from its answers:
+- **✅** the user can name specifics for every question
+- **⚠️** some answers are vague or partial ("I think so", "mostly")
 - **❓** the user doesn't know
 
-First round:
+**Rule 1, policy**
 
-1. **Policy (rule 1):** Which regulations apply to this customer (for example GDPR, the AI Act, sector rules), and which part of Itera's AI Use Policy matters most for this project? If the user hasn't read the policy, give them the link to [AI Use Policy at Itera](https://iteracloud.sharepoint.com/sites/framework/Itera%20Framework/AI%20use%20Policy%20at%20Itera.aspx) to read themselves. Never try to fetch it, because it requires an Itera login.
-2. **Agreement (rule 2):** What did you agree with the customer, before you started, on:
-   - **Tools:** which AI tools you'll use?
-   - **Data:** what data the AI may see, and what is off limits?
-   - **Cost:** whether AI costs are billed to the customer or included in Itera's delivery? Options: billed to the customer / included in Itera's delivery / not agreed / don't know.
+1. Which regulations apply to this customer (for example GDPR, the AI Act, sector rules)?
+2. Which part of Itera's AI Use Policy matters most for this project? If the user hasn't read the policy, give them the link to [AI Use Policy at Itera](https://iteracloud.sharepoint.com/sites/framework/Itera%20Framework/AI%20use%20Policy%20at%20Itera.aspx) to read themselves. Never try to fetch it, because it requires an Itera login.
 
-   Score ✅ only if all three are settled.
-3. **Tools (rule 3):** Which AI tools and models do you use on this project, who hosts them, and where did you check that they're approved for the PC you use (Itera's or the customer's)?
-4. **Data (rule 4):** Which kinds of sensitive data does the project handle (personal data, health data, financial data, trade secrets, none), and how do you keep them out of prompts and agent context?
+**Rule 2, agreement with the customer** (agreed before you started)
 
-Second round:
+3. Which AI tools did you agree with the customer to use?
+4. What data did you agree the AI may see?
+5. Are AI costs billed to the customer or included in Itera's delivery? Options: billed to the customer / included in Itera's delivery / not agreed / don't know.
 
-5. **Costs (rule 6):** About how much did the project's AI use cost last month, and where would you see an alert if it went over budget?
-6. **Turning back (rule 8):** When did AI work last go in circles for you, and what did you do then?
-7. **Team (rule 9):** Which setups, skills or lessons has the team shared in the last few months, and where?
-8. **Effect (rule 10):** Which metric tells you whether AI improves delivery on this project (DORA metrics, cycle time or similar), and what does it show?
+**Rule 3, approved equipment**
 
-Skip questions the user has already answered.
+6. Which AI tools and models do you use on this project?
+7. Who owns each model?
+8. Where is each model hosted (provider and region)?
+9. Where did you check that these tools are approved for the PC you use (Itera's or the customer's)?
+
+**Rule 4, sensitive data**
+
+10. Which kinds of sensitive data does the project handle? Options: personal data / health data / financial data / trade secrets / none / don't know.
+11. How do you keep that data out of prompts and agent context? Skip if the answer to 10 was "none".
+
+**Rule 6, provisions**
+
+12. About how much did the project's AI use cost last month?
+13. Where would you see an alert if AI costs went over budget? Options include "no budget set" and "no alert set".
+14. How do you choose the model and effort level for a task?
+
+**Rule 8, turning back**
+
+15. When did AI work last go in circles for you?
+16. What did you do then?
+
+**Rule 9, team**
+
+17. Which setups, skills or lessons has the team shared in the last few months?
+18. Where does the team share them?
+
+**Rule 10, effect**
+
+19. Which metric tells you whether AI improves delivery on this project (DORA metrics, cycle time or similar)?
+20. What does that metric show so far?
 
 ## Phase 2 — Repo scan (read-only)
 
