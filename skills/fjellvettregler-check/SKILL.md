@@ -38,7 +38,7 @@ This skill's questions and checks are written for these ten rules:
 
 ## Phase 1 — Intake
 
-Ask one thing per question, and ask for specifics, not yes or no. Keep it conversational: ask **one question at a time**, in the order below, and wait for the answer before you ask the next. Never batch several questions in one message or tool call. React briefly to each answer (one sentence, for example a short tip or a note that it's a gap) before moving on. A multiple-choice question tool is fine for questions with options, one question per call, with "Don't know" as an option. Skip questions the user has already answered, and follow-ups that don't apply.
+Ask one thing per question, and ask for specifics, not yes or no. Keep it conversational: ask **one question at a time**, in the order below, and wait for the answer before you ask the next. Never batch several questions in one message or tool call. React briefly to each answer (one sentence, for example a short tip or a note that it's a gap) before moving on. A multiple-choice question tool is fine for questions with options, one question per call, with "Don't know" as an option. Skip questions the user has already answered, and follow-ups that don't apply. The rule headings below are for your scoring only. Don't tell the user which rule a question belongs to.
 
 Score each rule from its answers:
 - **✅** the user can name specifics for every question
