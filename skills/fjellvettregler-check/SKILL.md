@@ -48,7 +48,7 @@ Score each rule from its answers:
 **Rule 1, policy**
 
 1. Which industry is the application in? Options: health / finance / public sector / other.
-2. Ask only if the answer to 1 was not "other": do you know whether the project follows the rules for that industry, on top of GDPR and the AI Act? Options: yes / partly / no / don't know. Name the rules for the chosen industry in the question:
+2. Ask only if the answer to 1 was not "other": do you know whether the project follows the rules for that industry, on top of GDPR? Options: yes / partly / no / don't know. Name the rules for the chosen industry in the question:
    - **Health:** *Normen*, the Norwegian code of conduct for information security in healthcare.
    - **Finance:** rules from Finanstilsynet and the EU's Digital Operational Resilience Act (DORA). Not the same as the DORA metrics in rule 10.
    - **Public sector:** the Security Act and Digdir's guidance.
