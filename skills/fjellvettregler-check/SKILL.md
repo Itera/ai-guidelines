@@ -58,7 +58,7 @@ Score each rule from its answers:
    - **Weak security:** missing access control, unencrypted personal data, or personal data in logs and test environments.
    - **Unsafe transfers:** sending personal data outside the EU/EEA, for example to a cloud or AI service, without a valid transfer basis.
    - **Ignoring people's rights:** no way to see, correct or delete your data, or no clear privacy notice.
-4. Which part of Itera's AI Use Policy matters most for this project? If the user hasn't read the policy, give them the link to [AI Use Policy at Itera](https://iteracloud.sharepoint.com/sites/framework/Itera%20Framework/AI%20use%20Policy%20at%20Itera.aspx) to read themselves. Never try to fetch it, because it requires an Itera login.
+4. Have you read Itera's AI Use Policy? Options: yes / partly / no. If not "yes", give them the link to [AI Use Policy at Itera](https://iteracloud.sharepoint.com/sites/framework/Itera%20Framework/AI%20use%20Policy%20at%20Itera.aspx) to read themselves. Never try to fetch it, because it requires an Itera login.
 
 **Rule 1, EU AI Act**
 
