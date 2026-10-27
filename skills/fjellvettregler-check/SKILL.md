@@ -93,7 +93,7 @@ Scoring:
 
 **Rule 4, sensitive data**
 
-11. Which kinds of sensitive data does the project handle? Options: personal data / health data / financial data / trade secrets / none / don't know.
+11. Which kinds of sensitive data does the project handle? Let the user choose several options at once, or write them out if the tool doesn't allow that. Options: personal data / health data / financial data / trade secrets / none / don't know.
 12. How do you keep that data out of prompts and agent context? Skip if the answer to 11 was "none".
 
 **Rule 6, provisions**
