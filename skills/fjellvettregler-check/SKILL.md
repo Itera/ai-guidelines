@@ -95,20 +95,15 @@ Scoring:
 12. Where would you see an alert if AI costs went over budget? Options include "no budget set" and "no alert set".
 13. How do you choose the model and effort level for a task?
 
-**Rule 8, turning back**
-
-14. When did AI work last go in circles for you?
-15. What did you do then?
-
 **Rule 9, team**
 
-16. Which setups, skills or lessons has the team shared in the last few months?
-17. Where does the team share them?
+14. Which setups, skills or lessons has the team shared in the last few months?
+15. Where does the team share them?
 
 **Rule 10, effect**
 
-18. Which metric tells you whether AI improves delivery on this project (DORA metrics, cycle time or similar)?
-19. What does that metric show so far?
+16. Which metric tells you whether AI improves delivery on this project (DORA metrics, cycle time or similar)?
+17. What does that metric show so far?
 
 ## Phase 2 — Repo scan (read-only)
 
@@ -128,7 +123,7 @@ Give one row per rule:
 | # | Rule | Status | Evidence | Next step |
 |---|------|--------|----------|-----------|
 
-- **Status:** ✅ OK · ⚠️ Gap · ❓ Can't verify. Combine the interview score and the scan. If they disagree, use the worse one.
+- **Status:** ✅ OK · ⚠️ Gap · ❓ Can't verify · 💡 Reminder. Rule 8 is a judgment call in the moment, so it's not asked about or scored. Give it 💡 and this next step: "Stop if the AI goes in circles, or you no longer understand what it does. Rethink the task or do it yourself." Combine the interview score and the scan. If they disagree, use the worse one.
 - **Evidence:** one line: what the user said or what you found (file path, setting). No secret values.
 - **Next step:** one concrete action and a link to the rule's wiki page: `https://github.com/Itera/ai-guidelines/blob/main/wiki/fjellvettregler/<NN>-<slug>.md`. Fetch the page if you need its advice.
 
@@ -144,7 +139,7 @@ Ask which gaps to work on. Then, one at a time, show the exact change and write 
 - **Rule 2 (agreement):** offer to write an AI use note (see below) for the developer to take to the customer.
 - **Rule 3 (equipment):** for each unvetted MCP server, plugin or skill: read its source or description, sum up what access it has, and let the user decide whether to keep it.
 - **Rule 1, AI Act:** never conclude that a use is or isn't legal. If the AI functionality isn't approved, suggest that the developer asks the customer's legal or compliance contact to look at it.
-- **Rules 1, 6, 8 and 10:** these are habits. Suggest one small, concrete step (for example "set a budget alert in the provider's console", "add a lead-time metric to the next retro") and link the wiki page.
+- **Rules 1, 6 and 10:** these are habits. Suggest one small, concrete step (for example "set a budget alert in the provider's console", "add a lead-time metric to the next retro") and link the wiki page.
 
 Never message the customer, change tool accounts or install tools yourself.
 

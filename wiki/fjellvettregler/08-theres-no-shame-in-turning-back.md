@@ -21,7 +21,7 @@ What to do:
 
 ## Recommended skills and tools
 
-- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) asks whether AI work has gone in circles lately, and suggests what to do then.
+- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) reminds you of the signs that it's time to stop.
 
 ## Examples and lessons learned
 
