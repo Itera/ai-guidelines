@@ -14,6 +14,7 @@ Rule: [AI-Fjellvettregler, rule 4](../../guidelines/fjellvettregler.md#4-pack-on
 ## Recommended skills and tools
 
 - [`dev-foundation-setup`](../../skills/dev-foundation-setup/SKILL.md) sets up deny rules so agents can't read secret files. See [Project setup](../project-setup.md).
+- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) checks `.gitignore`, deny rules and committed prompts for sensitive data.
 
 ## Examples and lessons learned
 

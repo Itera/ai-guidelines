@@ -21,7 +21,7 @@ What to do:
 
 ## Recommended skills and tools
 
-_None yet. Add skills that help plan or break down tasks._
+- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) reminds you of the signs that it's time to stop.
 
 ## Examples and lessons learned
 
