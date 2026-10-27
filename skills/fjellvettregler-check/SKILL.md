@@ -111,7 +111,7 @@ Scoring:
 **Rule 10, effect**
 
 19. Which metric tells you whether AI improves delivery on this project (DORA metrics, cycle time or similar)?
-20. What does that metric show so far?
+20. What does that metric show so far? Skip if the answer to 19 was "none" or "don't know".
 
 ## Phase 2 — Repo scan (read-only)
 
