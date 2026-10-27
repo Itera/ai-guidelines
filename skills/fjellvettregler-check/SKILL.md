@@ -47,11 +47,12 @@ Score each rule from its answers:
 
 **Rule 1, policy**
 
-1. Does the customer's industry have its own rules for data and IT, on top of GDPR and the AI Act? For example:
+1. Which industry is the application in? Options: health / finance / public sector / other.
+2. Ask only if the answer to 1 was not "other": do you know whether the project follows the rules for that industry, on top of GDPR and the AI Act? Options: yes / partly / no / don't know. Name the rules for the chosen industry in the question:
    - **Health:** *Normen*, the Norwegian code of conduct for information security in healthcare.
    - **Finance:** rules from Finanstilsynet and the EU's Digital Operational Resilience Act (DORA). Not the same as the DORA metrics in rule 10.
    - **Public sector:** the Security Act and Digdir's guidance.
-2. Which part of Itera's AI Use Policy matters most for this project? If the user hasn't read the policy, give them the link to [AI Use Policy at Itera](https://iteracloud.sharepoint.com/sites/framework/Itera%20Framework/AI%20use%20Policy%20at%20Itera.aspx) to read themselves. Never try to fetch it, because it requires an Itera login.
+3. Which part of Itera's AI Use Policy matters most for this project? If the user hasn't read the policy, give them the link to [AI Use Policy at Itera](https://iteracloud.sharepoint.com/sites/framework/Itera%20Framework/AI%20use%20Policy%20at%20Itera.aspx) to read themselves. Never try to fetch it, because it requires an Itera login.
 
 **Rule 1, EU AI Act**
 
@@ -70,41 +71,41 @@ Scoring:
 
 **Rules 2 and 3, tools and agreement** (agreed with the customer before you started)
 
-3. Which AI tools do you use on this project?
-4. Through which subscription do you use each tool? Options: the customer's / Itera's / your own personal one / don't know.
-5. Who approved each tool? Options: the customer / only Itera / nobody / don't know.
-6. What data did you agree with the customer that the AI may see?
-7. Ask only if a tool runs on Itera's or a personal subscription: are those AI costs billed to the customer or included in Itera's delivery? Options: billed to the customer / included in Itera's delivery / not agreed / don't know.
-8. Do you use any models outside those tools (for example through a direct API, or a local model)? If yes, ask who owns each model, then where it runs, as separate questions.
+4. Which AI tools do you use on this project?
+5. Through which subscription do you use each tool? Options: the customer's / Itera's / your own personal one / don't know.
+6. Who approved each tool? Options: the customer / only Itera / nobody / don't know.
+7. What data did you agree with the customer that the AI may see?
+8. Ask only if a tool runs on Itera's or a personal subscription: are those AI costs billed to the customer or included in Itera's delivery? Options: billed to the customer / included in Itera's delivery / not agreed / don't know.
+9. Do you use any models outside those tools (for example through a direct API, or a local model)? If yes, ask who owns each model, then where it runs, as separate questions.
 
 The developer doesn't need to know where the models in an approved tool are hosted. That's checked once, by whoever approves the tool. For example, with GitHub Copilot on the customer's business subscription, GitHub is the provider, and its terms cover the models it offers.
 
 Scoring:
-- **Rule 2:** ✅ if the customer approved every tool (5), the data is agreed (6), and the costs are settled (the customer's subscription in 4, or an answer in 7).
-- **Rule 3:** ✅ if every tool is approved by the customer or Itera, no tool runs on a personal subscription without approval, and any model from 8 has a known owner and location.
-- "Only Itera" in 5 is OK for rule 3 but a gap for rule 2, because the customer hasn't agreed to the tool.
+- **Rule 2:** ✅ if the customer approved every tool (6), the data is agreed (7), and the costs are settled (the customer's subscription in 5, or an answer in 8).
+- **Rule 3:** ✅ if every tool is approved by the customer or Itera, no tool runs on a personal subscription without approval, and any model from 9 has a known owner and location.
+- "Only Itera" in 6 is OK for rule 3 but a gap for rule 2, because the customer hasn't agreed to the tool.
 
 **Rule 4, sensitive data**
 
-9. Which kinds of sensitive data does the project handle? Options: personal data / health data / financial data / trade secrets / none / don't know.
-10. How do you keep that data out of prompts and agent context? Skip if the answer to 9 was "none".
+10. Which kinds of sensitive data does the project handle? Options: personal data / health data / financial data / trade secrets / none / don't know.
+11. How do you keep that data out of prompts and agent context? Skip if the answer to 10 was "none".
 
 **Rule 6, provisions**
 
-11. How much AI use do you have available, for example tokens, credits or premium requests per month? Options include "no limit" and "don't know".
-12. When do you get more? Options: every month / when someone tops it up / when I ask for it / don't know.
-13. How can you see how much you've used so far? Options: in the tool / in a dashboard / I get an alert near the limit / no way to see it / don't know.
-14. How do you choose the model and effort level for a task?
+12. How much AI use do you have available, for example tokens, credits or premium requests per month? Options include "no limit" and "don't know".
+13. When do you get more? Options: every month / when someone tops it up / when I ask for it / don't know.
+14. How can you see how much you've used so far? Options: in the tool / in a dashboard / I get an alert near the limit / no way to see it / don't know.
+15. How do you choose the model and effort level for a task?
 
 **Rule 9, team**
 
-15. Which setups, skills or lessons has the team shared in the last few months?
-16. Where does the team share them?
+16. Which setups, skills or lessons has the team shared in the last few months?
+17. Where does the team share them?
 
 **Rule 10, effect**
 
-17. Which metric tells you whether AI improves delivery on this project (DORA metrics, cycle time or similar)?
-18. What does that metric show so far?
+18. Which metric tells you whether AI improves delivery on this project (DORA metrics, cycle time or similar)?
+19. What does that metric show so far?
 
 ## Phase 2 — Repo scan (read-only)
 
