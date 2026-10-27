@@ -55,28 +55,18 @@ Score each rule from its answers:
 
 **Rule 1, EU AI Act**
 
-This is a first screening, not legal advice. Norway is adopting the AI Act through the EEA Agreement, and its obligations phase in from 2025 to 2027. The EU has proposed delaying some of them, so check the current dates on [Nkom's AI Act page](https://nkom.no/ki/hvem-gjelder-ki-loven) (as of 2026-10).
+- **A1.** Does the application you build have AI functionality, such as a chatbot, recommendations, scoring of people, or generated text or images? Options: yes / no / don't know.
+- **A2.** Ask only if A1 was "yes": has the customer approved the AI functionality, for example through its legal or compliance department? Options: yes / no / don't know.
 
-Start with the gate question:
-
-- **A1.** How is AI used on this project? Options: only as a development tool (coding assistants, chat) / the application itself uses AI (for example a chatbot, recommendations, scoring, or generated text or images) / don't know.
-- **A2.** How has the team learned to use AI tools safely? The AI Act requires this AI literacy from everyone who uses AI at work, so ask it whatever the answer to A1 was.
-
-If AI is only a development tool, stop here. The other obligations are for AI in the product. If the application uses AI, or the user doesn't know, continue:
-
-- **A3.** What does the AI feature do, in one sentence?
-- **A4.** Could the feature manipulate people, exploit vulnerable groups, score people based on their social behavior, or recognize emotions at work or in schools? Options: yes / no / don't know. These uses are **prohibited**.
-- **A5.** Is the AI used in any of these areas? Options: hiring or managing employees / education or exams / access to credit, insurance or public benefits / critical infrastructure / biometric identification / law enforcement, migration, courts or elections / a safety component of a regulated product (for example a medical device or machinery) / none / don't know. These areas are **high-risk**.
-- **A6.** Do people talk to the AI directly, or does it create text, images, audio or video that others see? Options: talk to it / it creates content / both / neither. These uses have **transparency obligations**, such as telling people they are talking to an AI, or marking content as AI-generated.
-- **A7.** Does the project train or fine-tune a general-purpose model, or only use existing models? Options: train or fine-tune / only use existing ones / don't know. Providers of general-purpose models have their own obligations.
-- **A8.** Who releases the AI system under their name: the customer or Itera? Options: the customer / Itera / don't know. The provider has most of the obligations, so this decides who owns them.
-- **A9.** Ask only if A5 was not "none": who on the customer's side owns the high-risk requirements (risk management, documentation, human oversight, logging, conformity assessment)?
+If A1 was "yes" or "don't know", tell the user that some AI functionality falls under the EU AI Act, which Norway is adopting through the EEA Agreement. Give these examples, and link [Nkom's AI Act page](https://nkom.no/ki/hvem-gjelder-ki-loven) for more:
+- **Prohibited:** manipulating people, social scoring, or recognizing emotions at work or in schools.
+- **High-risk, with strict requirements:** AI used in hiring, education and exams, credit or public benefits, critical infrastructure, or biometric identification.
+- **Transparency:** chatbots must tell people they are talking to an AI, and some AI-generated content must be marked.
 
 Scoring:
-- **✅** AI is only a development tool and A2 has a specific answer, or the obligations that apply are known and have an owner.
-- **⚠️** obligations probably apply, but nobody owns them, or A8 is "don't know".
+- **✅** A1 is "no", or A2 is "yes".
+- **⚠️** A2 is "no" or "don't know".
 - **❓** A1 is "don't know".
-- If A4 is "yes" or "don't know", or A5 names an area, list it **first** among the top gaps, and recommend that the customer gets legal advice before going further.
 
 **Rule 2, agreement with the customer** (agreed before you started)
 
@@ -141,7 +131,7 @@ Give one row per rule:
 - **Evidence:** one line: what the user said or what you found (file path, setting). No secret values.
 - **Next step:** one concrete action and a link to the rule's wiki page: `https://github.com/Itera/ai-guidelines/blob/main/wiki/fjellvettregler/<NN>-<slug>.md`. Fetch the page if you need its advice.
 
-After the table, list the **top 3 gaps** to fix first. Put possible prohibited or high-risk AI Act uses first (see Rule 1, EU AI Act), then rules 2, 4 and 5, since they carry the highest risk for the customer.
+After the table, list the **top 3 gaps** to fix first. Put AI functionality the customer hasn't approved first (see Rule 1, EU AI Act), then rules 2, 4 and 5, since they carry the highest risk for the customer.
 
 ## Phase 4 — Help fix the gaps (after approval)
 
@@ -152,7 +142,7 @@ Ask which gaps to work on. Then, one at a time, show the exact change and write 
 - **Rules 4 and 5 (guardrails):** if the [`dev-foundation-setup`](https://github.com/Itera/ai-guidelines/blob/main/skills/dev-foundation-setup/SKILL.md) skill is available, use it for deny rules, hooks and secret scanning. If not, propose the change and show the exact config before writing it.
 - **Rule 2 (agreement):** offer to write an AI use note (see below) for the developer to take to the customer.
 - **Rule 3 (equipment):** for each unvetted MCP server, plugin or skill: read its source or description, sum up what access it has, and let the user decide whether to keep it.
-- **Rule 1, AI Act:** never conclude that a use is or isn't legal. Sum up which answers point to obligations, and suggest who should look at it (the customer's legal or compliance contact). For A2, suggest a concrete step, such as going through these Fjellvettregler with the team.
+- **Rule 1, AI Act:** never conclude that a use is or isn't legal. If the AI functionality isn't approved, suggest that the developer asks the customer's legal or compliance contact to look at it.
 - **Rules 1, 6, 8 and 10:** these are habits. Suggest one small, concrete step (for example "set a budget alert in the provider's console", "add a lead-time metric to the next retro") and link the wiki page.
 
 Never message the customer, change tool accounts or install tools yourself.
