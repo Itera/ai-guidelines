@@ -115,7 +115,7 @@ Scoring:
 
 ## Phase 2 — Repo scan (read-only)
 
-Only scan if you're inside the project's repo. Sample, don't read whole trees. These checks are written for Claude Code. For other tools, look for their matching config files, or ask.
+Only scan if you're inside the project's repo. **Ask the user first**, and say in one sentence what you'll look at (settings, permissions, MCP servers, `.gitignore`, review setup), and that you won't open secret files. If they say no, skip this phase and score from the interview only. Sample, don't read whole trees. These checks are written for Claude Code. For other tools, look for their matching config files, or ask.
 
 - **Rule 3, approved equipment:** list MCP servers (`.mcp.json`, `.claude/settings*.json`), plugins and third-party skills in `.claude/skills/`. For each one from outside the team, ask whether it was vetted and where it comes from.
 - **Rule 4, sensitive data:** does `.gitignore` cover secret files? Are there deny rules for secret files? Do `CLAUDE.md`, `.claude/rules/` or committed prompts contain customer data, personal data or real internal hostnames? Is secret scanning (gitleaks, platform scanning) set up?
