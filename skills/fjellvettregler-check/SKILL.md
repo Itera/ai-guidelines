@@ -38,6 +38,8 @@ This skill's questions and checks are written for these ten rules:
 
 **Language:** before anything else, ask the user whether to run the check in English or Norwegian (bokmål). Use that language for every question, reaction, the report and the AI use note. Use Norwegian names for Norwegian laws and bodies (for example *sikkerhetsloven*, *personvernombud*). The rule titles have no official Norwegian version, so give them in English. The linked wiki pages are in English.
 
+**Links:** whenever you give the user a link, write the full URL as plain text, not as a Markdown link (`[text](url)`) or in backticks. Terminals like Claude Code don't make Markdown links clickable, but they do make bare URLs clickable.
+
 ## Phase 1 — Intake
 
 Ask one thing per question, and ask for specifics, not yes or no. Keep it conversational: ask **one question at a time**, in the order below, and wait for the answer before you ask the next. Never batch several questions in one message or tool call. React briefly to each answer (one sentence, for example a short tip or a note that it's a gap) before moving on. A multiple-choice question tool is fine for questions with options, one question per call, with "Don't know" as an option. Skip questions the user has already answered, and follow-ups that don't apply. The rule headings below are for your scoring only. Don't tell the user which rule a question belongs to.
@@ -56,18 +58,18 @@ Score each rule from its answers:
    - **Public sector:** the Security Act and Digdir's guidance.
 3. Has the application had a GDPR review, for example by the customer's data protection officer? Options: yes / partly / no / not needed, no personal data / don't know. Give these common ways applications break GDPR as examples:
    - **No legal basis:** processing personal data without valid consent or another legal basis, for example tracking cookies set before the user agrees.
-   - **Too much data, kept too long:** collecting more than the purpose needs, or no deletion when it's no longer needed.
    - **Weak security:** missing access control, unencrypted personal data, or personal data in logs and test environments.
    - **Unsafe transfers:** sending personal data outside the EU/EEA, for example to a cloud or AI service, without a valid transfer basis.
-   - **Ignoring people's rights:** no way to see, correct or delete your data, or no clear privacy notice.
-4. Have you read Itera's AI Use Policy? Options: yes / partly / no. If not "yes", give them the link to [AI Use Policy at Itera](https://iteracloud.sharepoint.com/sites/framework/Itera%20Framework/AI%20use%20Policy%20at%20Itera.aspx) to read themselves. Never try to fetch it, because it requires an Itera login.
+4. Have you read Itera's AI Use Policy? Options: yes / partly / no. If not "yes", give them the link to read themselves. Give the full URL on its own line (see **Links** above):
+   https://iteracloud.sharepoint.com/sites/framework/Itera%20Framework/AI%20use%20Policy%20at%20Itera.aspx
+   Never try to fetch it, because it requires an Itera login.
 
 **Rule 1, EU AI Act**
 
 - **A1.** Does the application you build have AI functionality, such as a chatbot, recommendations, scoring of people, or generated text or images? Options: yes / no / don't know.
 - **A2.** Ask only if A1 was "yes": has the customer approved the AI functionality, for example through its legal or compliance department? Options: yes / no / don't know.
 
-If A1 was "yes" or "don't know", tell the user that some AI functionality falls under the EU AI Act, which Norway is adopting through the EEA Agreement. Give these examples, and link [Nkom's AI Act page](https://nkom.no/ki/hvem-gjelder-ki-loven) for more:
+If A1 was "yes" or "don't know", tell the user that some AI functionality falls under the EU AI Act, which Norway is adopting through the EEA Agreement. Give these examples (give the link https://nkom.no/ki/hvem-gjelder-ki-loven to Nkom's AI Act page for more):
 - **Prohibited:** manipulating people, social scoring, or recognizing emotions at work or in schools.
 - **High-risk, with strict requirements:** AI used in hiring, education and exams, credit or public benefits, critical infrastructure, or biometric identification.
 - **Transparency:** chatbots must tell people they are talking to an AI, and some AI-generated content must be marked.
