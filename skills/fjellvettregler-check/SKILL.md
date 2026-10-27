@@ -47,7 +47,10 @@ Score each rule from its answers:
 
 **Rule 1, policy**
 
-1. Which regulations apply to this customer (for example GDPR, the AI Act, sector rules)?
+1. Does the customer's industry have its own rules for data and IT, on top of GDPR and the AI Act? For example:
+   - **Health:** *Normen*, the Norwegian code of conduct for information security in healthcare.
+   - **Finance:** rules from Finanstilsynet and the EU's Digital Operational Resilience Act (DORA). Not the same as the DORA metrics in rule 10.
+   - **Public sector:** the Security Act and Digdir's guidance.
 2. Which part of Itera's AI Use Policy matters most for this project? If the user hasn't read the policy, give them the link to [AI Use Policy at Itera](https://iteracloud.sharepoint.com/sites/framework/Itera%20Framework/AI%20use%20Policy%20at%20Itera.aspx) to read themselves. Never try to fetch it, because it requires an Itera login.
 
 **Rule 2, agreement with the customer** (agreed before you started)
@@ -58,10 +61,12 @@ Score each rule from its answers:
 
 **Rule 3, approved equipment**
 
-6. Which AI tools and models do you use on this project?
-7. Who owns each model?
-8. Where is each model hosted (provider and region)?
-9. Where did you check that these tools are approved for the PC you use (Itera's or the customer's)?
+6. Which AI tools do you use on this project?
+7. Through which subscription do you use each tool? Options: the customer's / Itera's / your own personal one / don't know. A personal subscription is rarely approved for customer work, so score it ⚠️ unless the customer has approved it.
+8. Who approved each tool for this project? Options: the customer / Itera / nobody / don't know.
+9. Do you use any models outside those tools (for example through a direct API, or a local model)? If yes, ask who owns each model, then where it runs, as separate questions.
+
+The developer doesn't need to know where the models in an approved tool are hosted. That's checked once, by whoever approves the tool. For example, with GitHub Copilot on the customer's business subscription, GitHub is the provider, and its terms cover the models it offers.
 
 **Rule 4, sensitive data**
 
