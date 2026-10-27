@@ -166,7 +166,7 @@ paths:
 ### Step C — Skills
 
 Create these in `.claude/skills/`. Adapt the platform commands (gh / az repos / glab) to the user's tooling. Scale them to the repo; don't skip them:
-- Always create a review skill that checks a diff against **this repo's hard rules**, in addition to the generic checklist. For a small repo, a single short check skill is enough.
+- Always create a review skill that checks a diff against **this repo's hard rules** and the security checklist in pr-review step 3. For a small repo, one short skill is enough, but it must still include the security checklist.
 - Create issue-to-plan only if Phase 0 confirmed an issue tracker.
 
 **issue-to-plan/SKILL.md**
@@ -211,12 +211,12 @@ Optional: **adr-writer** (draft an ADR from a discussion or PR) and **docs-sync*
 
 ## Quality checklist (Step D runs it; Audit mode reports against it)
 
-- CLAUDE.md is at most ~100 lines. Every pointer resolves to a real file or is marked "(planned)".
+- CLAUDE.md is at most ~100 lines. Every pointer resolves to a real file. "(planned)" marks are allowed only at the end of a greenfield setup; Audit mode reports any that are still there, and any whose path doesn't match the planned file tree.
 - No fact is duplicated. Each hard rule is one checkable line that links to its reason in docs instead of restating it.
 - The full baseline deny list from Step A is present. Any entry that was removed has a stated reason.
 - Every irreversible or outward-facing command named in the docs is covered by an `ask` rule.
 - Secret scanning is enabled, or the launch/deploy docs have a step to enable it.
-- A review skill exists that enforces this repo's hard rules. Every skill has a precise trigger description and a short body.
+- A review skill exists that enforces this repo's hard rules and includes the security checklist. Every skill has a precise trigger description and a short body.
 - No file contains secrets, credentialed hostnames or customer data.
 - Docs match the code.
 
