@@ -21,7 +21,7 @@ What to do:
 
 ## Recommended skills and tools
 
-- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) reminds you of the signs that it's time to stop.
+- [`fjellvettregler-developer-check`](../../skills/fjellvettregler-developer-check/SKILL.md) reminds you of the signs that it's time to stop.
 
 ## Examples and lessons learned
 

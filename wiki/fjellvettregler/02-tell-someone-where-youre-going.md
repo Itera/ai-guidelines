@@ -18,7 +18,7 @@ Revisit the agreement when the team, tools or scope change.
 
 ## Recommended skills and tools
 
-- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) drafts an AI use note to agree on with the customer.
+- [`fjellvettregler-developer-check`](../../skills/fjellvettregler-developer-check/SKILL.md) drafts an AI use note to agree on with the customer.
 
 ## Examples and lessons learned
 
