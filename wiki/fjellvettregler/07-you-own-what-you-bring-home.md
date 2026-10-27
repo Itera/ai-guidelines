@@ -15,7 +15,7 @@ Rule: [AI-Fjellvettregler, rule 7](../../guidelines/fjellvettregler.md#7-you-own
 ## Recommended skills and tools
 
 - [`dev-foundation-setup`](../../skills/dev-foundation-setup/SKILL.md) creates a `pr-review` skill and an ADR setup. See [Project setup](../project-setup.md).
-- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) checks for a PR review process and ADRs.
+- [`fjellvettregler-developer-check`](../../skills/fjellvettregler-developer-check/SKILL.md) checks for a PR review process and ADRs.
 
 ## Examples and lessons learned
 

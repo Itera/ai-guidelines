@@ -1,9 +1,9 @@
 ---
-name: fjellvettregler-check
+name: fjellvettregler-developer-check
 description: Check how well a developer and their project follow Itera's AI-Fjellvettregler, and help close the gaps. Use when asked to check AI guideline compliance, run a Fjellvettregler check, review AI use on a project, or at the start of a new customer engagement.
 ---
 
-# Fjellvettregler Check
+# Fjellvettregler Developer Check
 
 Checks how well one developer and one customer project follow the [AI-Fjellvettregler](https://github.com/Itera/ai-guidelines/blob/main/guidelines/fjellvettregler.md), then helps fix the gaps.
 
@@ -17,10 +17,10 @@ Work in phases. Don't change any file before the user approves the fix (Phase 4)
 
 Install it in your own account, not in customer repos, so it works on every project:
 
-- **Claude Code:** copy this folder to `~/.claude/skills/fjellvettregler-check/`.
+- **Claude Code:** copy this folder to `~/.claude/skills/fjellvettregler-developer-check/`.
 - **Cowork or claude.ai:** add the skill to your own account.
 
-Then start it from inside the project's repo with `/fjellvettregler-check`, or ask something like "run a Fjellvettregler check".
+Then start it from inside the project's repo with `/fjellvettregler-developer-check`, or ask something like "run a Fjellvettregler check".
 
 ## Non-negotiable principles
 

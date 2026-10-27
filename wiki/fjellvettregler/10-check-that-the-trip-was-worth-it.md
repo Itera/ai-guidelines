@@ -13,7 +13,7 @@ Rule: [AI-Fjellvettregler, rule 10](../../guidelines/fjellvettregler.md#10-check
 
 ## Recommended skills and tools
 
-- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) asks how you measure the effect of AI and suggests a first metric.
+- [`fjellvettregler-developer-check`](../../skills/fjellvettregler-developer-check/SKILL.md) asks how you measure the effect of AI and suggests a first metric.
 
 ## Examples and lessons learned
 

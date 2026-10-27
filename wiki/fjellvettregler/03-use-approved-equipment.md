@@ -16,7 +16,7 @@ Rule: [AI-Fjellvettregler, rule 3](../../guidelines/fjellvettregler.md#3-use-app
 
 ## Recommended skills and tools
 
-- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) lists MCP servers, plugins and third-party skills, and helps you vet them.
+- [`fjellvettregler-developer-check`](../../skills/fjellvettregler-developer-check/SKILL.md) lists MCP servers, plugins and third-party skills, and helps you vet them.
 
 ## Examples and lessons learned
 

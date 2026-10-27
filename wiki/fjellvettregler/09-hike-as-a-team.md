@@ -14,7 +14,7 @@ Rule: [AI-Fjellvettregler, rule 9](../../guidelines/fjellvettregler.md#9-hike-as
 ## Recommended skills and tools
 
 - [`dev-foundation-setup`](../../skills/dev-foundation-setup/SKILL.md) gives a team a shared, committed AI setup. See [Project setup](../project-setup.md).
-- [`fjellvettregler-check`](../../skills/fjellvettregler-check/SKILL.md) checks whether the team's AI setup is committed and shared.
+- [`fjellvettregler-developer-check`](../../skills/fjellvettregler-developer-check/SKILL.md) checks whether the team's AI setup is committed and shared.
 
 ## Examples and lessons learned
 
