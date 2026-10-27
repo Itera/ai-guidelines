@@ -77,7 +77,7 @@ Scoring:
 
 **Rules 2 and 3, tools and agreement** (agreed with the customer before you started)
 
-5. Which AI tools do you use on this project?
+5. Which AI tools do you use on this project? Ask this as an open question, not multiple choice, so the user can write out all their tools.
 6. Through which subscription do you use each tool? Options: the customer's / Itera's / your own personal one / don't know.
 7. Who approved each tool? Options: the customer / only Itera / nobody / don't know.
 8. What data did you agree with the customer that the AI may see?
