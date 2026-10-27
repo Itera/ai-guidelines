@@ -32,6 +32,10 @@ Ask the user (use a multiple-choice question tool if available, at most 4 questi
 3. Compliance or security constraints (GDPR, customer data, regulated domain)
 4. Existing standards or docs to reuse
 
+Always get an answer to question 2. It decides which skills to create in Step C.
+
+If the repo has no source code yet, treat it as **greenfield**. Mark planned paths "(planned)" in CLAUDE.md, and add a maintenance step to remove the marks once the files exist.
+
 If `CLAUDE.md` or `.claude/` already exists, switch to **Audit mode** (see the end of this file).
 
 ## Phase 1 — Discovery (read-only)
@@ -77,6 +81,8 @@ docs/
   development/workflow.md     # branching, commits, definition of done
 ```
 
+Small repo (a single app or site, no team, fewer than ~10 decisions): one `docs/decisions.md` replaces `docs/adr/`, and `docs/architecture/` and `docs/development/` can be left out.
+
 ## Phase 3 — Build (one step at a time, review after each)
 
 ### Step A — Security guardrails (always first)
@@ -100,13 +106,22 @@ docs/
       "Bash(cat .env*)",
       "Bash(git push --force *)",
       "Bash(git push -f *)"
+    ],
+    "ask": [
+      "Bash(git push *)",
+      "Bash(gh repo edit *)",
+      "Bash(gh repo delete *)",
+      "Bash(gh api *)",
+      "Bash(gh release *)"
     ]
   }
 }
 ```
+   Keep the full deny list even if the repo has no secrets today. It costs nothing, and secrets show up later. Only remove an entry if you can state a reason.
+   Add `ask` rules for every irreversible or outward-facing command: pushes, visibility or settings changes, deletes, releases and deploys. Adapt them to the platform CLI (gh / az / glab). After Step B, grep the docs you wrote for commands and make sure each such command is covered.
    Allow `.env.example` explicitly if the deny patterns catch it. Tell the user that Bash deny rules are a safety net, not a guarantee; for stricter control, add a PreToolUse hook or run in a sandbox.
 2. Ensure `.gitignore` covers secret files and `.claude/settings.local.json`.
-3. If there's no secret scanning, recommend gitleaks (pre-commit and/or CI) or the platform's built-in scanning. Propose the config; don't install tools without consent.
+3. If there's no secret scanning, recommend gitleaks (pre-commit and/or CI) or the platform's built-in scanning. Propose the config; don't install tools without consent. If scanning can't be enabled yet (for example, the platform only offers it for public repos and the repo is still private), add it as a step in the repo's launch or deploy docs so the recommendation isn't lost.
 
 ### Step B — CLAUDE.md and docs
 
@@ -131,6 +146,10 @@ CLAUDE.md template:
 - Area rules load automatically from .claude/rules/
 ```
 
+Hard rules:
+- Write each one as a single imperative line. Its reason and details live only in the linked ADR or decision; link to it instead of restating it.
+- Make every rule checkable: give a threshold or a named standard (e.g. "WCAG 2.1 AA contrast"), not a judgement ("sufficient contrast").
+
 ADR template (`docs/adr/0000-template.md`): Title, Status (proposed/accepted/superseded), Context, Decision, Consequences, Alternatives considered. Write 1–3 ADRs that capture key existing decisions found in discovery, and mark them "accepted (retroactive)".
 
 Path-scoped rule example (`.claude/rules/backend.md`):
@@ -146,7 +165,9 @@ paths:
 
 ### Step C — Skills
 
-Create these in `.claude/skills/`. Adapt the platform commands (gh / az repos / glab) to the user's tooling.
+Create these in `.claude/skills/`. Adapt the platform commands (gh / az repos / glab) to the user's tooling. Scale them to the repo; don't skip them:
+- Always create a review skill that checks a diff against **this repo's hard rules** and the security checklist in pr-review step 3. For a small repo, one short skill is enough, but it must still include the security checklist.
+- Create issue-to-plan only if Phase 0 confirmed an issue tracker.
 
 **issue-to-plan/SKILL.md**
 
@@ -183,18 +204,29 @@ Optional: **adr-writer** (draft an ADR from a discussion or PR) and **docs-sync*
 
 ### Step D — Verify
 
+- Run the **Quality checklist** below against what you created, and fix any failures before you finish.
 - Confirm deny rules work: ask the user to try having Claude read `.env` in a new session (it should be refused).
-- Check CLAUDE.md line count and that every pointer resolves to a real file.
-- Check that no file you created contains secrets, real hostnames with credentials, or duplicated content.
-- Dry-run `pr-review` on a recent PR and `issue-to-plan` on a real issue; tighten their descriptions if they trigger wrongly.
+- Dry-run the review skill on a recent PR or diff, and `issue-to-plan` (if created) on a real issue. Tighten their descriptions if they trigger wrongly.
 - Summarize what was created and the maintenance routine.
+
+## Quality checklist (Step D runs it; Audit mode reports against it)
+
+- CLAUDE.md is at most ~100 lines. Every pointer resolves to a real file. "(planned)" marks are allowed only at the end of a greenfield setup; Audit mode reports any that are still there, and any whose path doesn't match the planned file tree.
+- No fact is duplicated. Each hard rule is one checkable line that links to its reason in docs instead of restating it.
+- The full baseline deny list from Step A is present. Any entry that was removed has a stated reason.
+- Every irreversible or outward-facing command named in the docs is covered by an `ask` rule.
+- Secret scanning is enabled, or the launch/deploy docs have a step to enable it.
+- A review skill exists that enforces this repo's hard rules and includes the security checklist. Every skill has a precise trigger description and a short body.
+- No file contains secrets, credentialed hostnames or customer data.
+- Docs match the code.
 
 ## Audit mode (existing setup)
 
-Report, without editing: CLAUDE.md length and bloat, duplicated facts, stale pointers, missing deny rules, skills with vague descriptions or overly long bodies, and docs that no longer match the code. Propose concrete trims and fixes, then apply them step by step after approval.
+Report against the Quality checklist without editing anything. Propose concrete trims and fixes, then apply them step by step after approval.
 
 ## Maintenance routine (include in the final summary)
 
-- Every PR: pr-review checks docs impact.
+- Every PR: the review skill checks hard rules and docs impact.
+- Greenfield: once planned files exist, remove the "(planned)" marks.
 - New significant decision: add an ADR.
 - Quarterly: run this skill in Audit mode to trim bloat and fix drift.
