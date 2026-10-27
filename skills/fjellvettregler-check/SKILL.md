@@ -47,7 +47,7 @@ Score each answer:
 
 First round:
 
-1. **Policy (rule 1):** Which regulations apply to this customer (for example GDPR, the AI Act, sector rules), and which part of Itera's AI Use Policy matters most for this project?
+1. **Policy (rule 1):** Which regulations apply to this customer (for example GDPR, the AI Act, sector rules), and which part of Itera's AI Use Policy matters most for this project? If the user hasn't read the policy, give them the link to [AI Use Policy at Itera](https://iteracloud.sharepoint.com/sites/framework/Itera%20Framework/AI%20use%20Policy%20at%20Itera.aspx) to read themselves. Never try to fetch it, because it requires an Itera login.
 2. **Agreement (rule 2):** What did you agree with the customer about AI tools, data, hosting and cost, and where is it written down? Options: written / verbal / none / don't know.
 3. **Tools (rule 3):** Which AI tools and models do you use on this project, who hosts them, and where did you check that they're approved for the PC you use (Itera's or the customer's)?
 4. **Data (rule 4):** Which kinds of sensitive data does the project handle (personal data, health data, financial data, trade secrets, none), and how do you keep them out of prompts and agent context?
