@@ -91,19 +91,20 @@ Scoring:
 
 **Rule 6, provisions**
 
-11. About how much did the project's AI use cost last month?
-12. Where would you see an alert if AI costs went over budget? Options include "no budget set" and "no alert set".
-13. How do you choose the model and effort level for a task?
+11. How much AI use do you have available, for example tokens, credits or premium requests per month? Options include "no limit" and "don't know".
+12. When do you get more? Options: every month / when someone tops it up / when I ask for it / don't know.
+13. How can you see how much you've used so far? Options: in the tool / in a dashboard / I get an alert near the limit / no way to see it / don't know.
+14. How do you choose the model and effort level for a task?
 
 **Rule 9, team**
 
-14. Which setups, skills or lessons has the team shared in the last few months?
-15. Where does the team share them?
+15. Which setups, skills or lessons has the team shared in the last few months?
+16. Where does the team share them?
 
 **Rule 10, effect**
 
-16. Which metric tells you whether AI improves delivery on this project (DORA metrics, cycle time or similar)?
-17. What does that metric show so far?
+17. Which metric tells you whether AI improves delivery on this project (DORA metrics, cycle time or similar)?
+18. What does that metric show so far?
 
 ## Phase 2 — Repo scan (read-only)
 
