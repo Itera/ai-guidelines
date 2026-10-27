@@ -7,34 +7,57 @@ description: Check how well a developer and their project follow Itera's AI-Fjel
 
 Checks how well one developer and one customer project follow the [AI-Fjellvettregler](https://github.com/Itera/ai-guidelines/blob/main/guidelines/fjellvettregler.md), then helps fix the gaps.
 
+**This is a self-check for the developer, not an audit.** The report belongs to the developer, who decides whether to share it. Honest answers matter more than a clean report.
+
 Most of the rules are about agreements and habits, not code. So the check is mostly an **interview**, with a **read-only scan** of the repo for the rules that leave traces there. Run it at project start and then every quarter.
 
 Work in phases. Don't change any file before the user approves the fix (Phase 4).
 
+## How to install
+
+Install it in your own account, not in customer repos, so it works on every project:
+
+- **Claude Code:** copy this folder to `~/.claude/skills/fjellvettregler-check/`.
+- **Cowork or claude.ai:** add the skill to your own account.
+
+Then start it from inside the project's repo with `/fjellvettregler-check`, or ask something like "run a Fjellvettregler check".
+
 ## Non-negotiable principles
 
-- **The rules are fetched, not copied.** At the start, fetch the current rules from `https://raw.githubusercontent.com/Itera/ai-guidelines/main/guidelines/fjellvettregler.md`. If you can't fetch it, use the rule titles below, and tell the user the check may be out of date.
 - **No secrets.** Never open, print or summarize `.env*` (except `.env.example`), keys, certificates, `secrets/`, `credentials*`, `*.tfstate*` or config files with connection strings. Never run `env`, `printenv` or commands that show tokens. You may check *whether* a credential exists or which account is signed in, but never show its value.
 - **Customer details stay local.** The report and any notes contain customer context. Show them in the session, or save them in the customer's repo if the user asks. Never send them anywhere else, and never add them to the `ai-guidelines` repo.
 - **Unclear means "can't verify", not "OK".** If you can't tell, ask. If the user doesn't know, mark the rule ❓.
 
-Fallback rule titles: 1 Know the rules before you head out · 2 Tell someone where you're going · 3 Use approved equipment · 4 Pack only what you can afford to lose · 5 Give agents their own rope · 6 Know your provisions · 7 You own what you bring home · 8 There's no shame in turning back · 9 Hike as a team · 10 Check that the trip was worth it.
+## The rules
+
+This skill's questions and checks are written for these ten rules:
+
+1 Know the rules before you head out · 2 Tell someone where you're going · 3 Use approved equipment · 4 Pack only what you can afford to lose · 5 Give agents their own rope · 6 Know your provisions · 7 You own what you bring home · 8 There's no shame in turning back · 9 Hike as a team · 10 Check that the trip was worth it
+
+**Drift check:** at the start, try to fetch `https://raw.githubusercontent.com/Itera/ai-guidelines/main/guidelines/fjellvettregler.md` and compare its rule titles with the list above. If they differ, warn the user: "The guidelines have changed since this skill was written. Some checks may be out of date." Then continue. If the fetch fails or is blocked, continue without a warning.
 
 ## Phase 1 — Intake
 
-Ask these questions (use a multiple-choice question tool if one is available, max 4 per round):
+Ask for specifics, not yes or no. Use a multiple-choice question tool if one is available (max 4 per round), with "Don't know" as an option.
 
-1. **Policy (rule 1):** Have you read Itera's AI Use Policy, and do you know which regulations apply to this customer (for example GDPR, the AI Act, sector rules)?
-2. **Agreement (rule 2):** Is there an agreement with the customer on AI use? Is it written or verbal? Does it cover tools, data, hosting and cost?
-3. **Tools (rule 3):** Which AI tools and models do you use on this project? Are they approved for the PC you use (Itera's or the customer's)?
-4. **Data (rule 4):** What kinds of data does the project handle (personal data, health data, financial data, trade secrets, none)?
+Score each answer:
+- **✅** the user can name specifics
+- **⚠️** the answer is vague or partial ("I think so", "mostly")
+- **❓** the user doesn't know
+
+First round:
+
+1. **Policy (rule 1):** Which regulations apply to this customer (for example GDPR, the AI Act, sector rules), and which part of Itera's AI Use Policy matters most for this project?
+2. **Agreement (rule 2):** What did you agree with the customer about AI tools, data, hosting and cost, and where is it written down? Options: written / verbal / none / don't know.
+3. **Tools (rule 3):** Which AI tools and models do you use on this project, who hosts them, and where did you check that they're approved for the PC you use (Itera's or the customer's)?
+4. **Data (rule 4):** Which kinds of sensitive data does the project handle (personal data, health data, financial data, trade secrets, none), and how do you keep them out of prompts and agent context?
 
 Second round:
 
-5. **Costs (rule 6):** Do you know what the project's AI use costs? Is there a budget with alerts?
-6. **Turning back (rule 8):** In the last month, did you lose time on AI work that went in circles? What did you do then?
-7. **Team (rule 9):** Does the team share setups, skills and lessons, or does everyone use AI on their own?
-8. **Effect (rule 10):** Do you measure whether AI improves delivery (DORA metrics, cycle time or similar)?
+5. **Costs (rule 6):** About how much did the project's AI use cost last month, and where would you see an alert if it went over budget?
+6. **Turning back (rule 8):** When did AI work last go in circles for you, and what did you do then?
+7. **Team (rule 9):** Which setups, skills or lessons has the team shared in the last few months, and where?
+8. **Effect (rule 10):** Which metric tells you whether AI improves delivery on this project (DORA metrics, cycle time or similar), and what does it show?
 
 Skip questions the user has already answered.
 
@@ -56,7 +79,7 @@ Give one row per rule:
 | # | Rule | Status | Evidence | Next step |
 |---|------|--------|----------|-----------|
 
-- **Status:** ✅ OK · ⚠️ Gap · ❓ Can't verify
+- **Status:** ✅ OK · ⚠️ Gap · ❓ Can't verify. Combine the interview score and the scan. If they disagree, use the worse one.
 - **Evidence:** one line: what the user said or what you found (file path, setting). No secret values.
 - **Next step:** one concrete action and a link to the rule's wiki page: `https://github.com/Itera/ai-guidelines/blob/main/wiki/fjellvettregler/<NN>-<slug>.md`. Fetch the page if you need its advice.
 
@@ -64,7 +87,9 @@ After the table, list the **top 3 gaps** to fix first. Put rules 2, 4 and 5 firs
 
 ## Phase 4 — Help fix the gaps (after approval)
 
-Ask which gaps to work on. Then, one at a time:
+Ask which gaps to work on. Then, one at a time, show the exact change and write it only after the user approves.
+
+**Shared files:** `.claude/settings.json`, CI config, `.gitignore` and other committed config affect the whole team, possibly including the customer's developers. Make those changes on a branch, and tell the user to put them through the team's normal PR review.
 
 - **Rules 4 and 5 (guardrails):** if the [`dev-foundation-setup`](https://github.com/Itera/ai-guidelines/blob/main/skills/dev-foundation-setup/SKILL.md) skill is available, use it for deny rules, hooks and secret scanning. If not, propose the change and show the exact config before writing it.
 - **Rule 2 (agreement):** offer to write an AI use note (see below) for the developer to take to the customer.

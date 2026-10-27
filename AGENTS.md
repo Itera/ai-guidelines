@@ -8,7 +8,7 @@ This repo is Itera's shared knowledge base for AI-assisted work. People and agen
 
 - `guidelines/` – normative rules owned by people (e.g. the AI-Fjellvettregler). Do **not** edit unless the user explicitly asks to change a guideline. Never move content from `wiki/` into here on your own.
 - `wiki/` – everything else: practices, tool notes, lessons learned, explanations. Descriptive, not policy. Flat until it gets crowded; propose subfolders before creating them.
-- `skills/` – reusable agent skills, one folder per skill with a `SKILL.md`.
+- `skills/` – reusable agent skills, one folder per skill with a `SKILL.md`. When a guideline changes, update the skills that check it (e.g. `skills/fjellvettregler-check`) in the same PR.
 - `index.md` – the catalog. One line per page. Read it first.
 
 ## Finding information
@@ -40,4 +40,4 @@ When the user wants to add something (an experience, a tip, a tool review, a lin
 
 ## Maintenance
 
-When asked to "lint" or "health-check" the repo, report (don't fix silently): broken links, pages missing from `index.md`, near-duplicate pages, contradictions, and claims older than ~6 months about tools, prices or models.
+When asked to "lint" or "health-check" the repo, report (don't fix silently): broken links, pages missing from `index.md`, near-duplicate pages, contradictions, skills whose rule list no longer matches `guidelines/`, and claims older than ~6 months about tools, prices or models.
